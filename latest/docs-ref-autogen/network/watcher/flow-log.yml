@@ -19,6 +19,7 @@ directCommands:
     az network watcher flow-log create --name
                                        [--enabled {0, 1, f, false, n, no, t, true, y, yes}]
                                        [--format {JSON}]
+                                       [--identity]
                                        [--interval]
                                        [--location]
                                        [--log-version]
@@ -31,6 +32,7 @@ directCommands:
                                        [--subnet]
                                        [--tags]
                                        [--traffic-analytics {0, 1, f, false, n, no, t, true, y, yes}]
+                                       [--user-assigned-identity]
                                        [--vnet]
                                        [--workspace]
   examples:
@@ -72,6 +74,9 @@ directCommands:
     parameterValueGroup: "JSON"
     summary: |-
       File type of the flow log.
+  - name: --identity
+    summary: |-
+      FlowLog resource Managed Identity  Support shorthand-syntax, json-file and yaml-file. Try "??" to show more.
   - name: --interval
     defaultValue: "60"
     summary: |-
@@ -112,6 +117,9 @@ directCommands:
     parameterValueGroup: "0, 1, f, false, n, no, t, true, y, yes"
     summary: |-
       Enable traffic analytics. Defaults to true if `--workspace` is provided.
+  - name: --user-assigned-identity
+    summary: |-
+      Name or ID of the ManagedIdentity Resource.
   - name: --vnet
     summary: |-
       Name or ID of the Virtual Network Resource.
@@ -209,6 +217,7 @@ directCommands:
                                        [--enabled {0, 1, f, false, n, no, t, true, y, yes}]
                                        [--force-string {0, 1, f, false, n, no, t, true, y, yes}]
                                        [--format {JSON}]
+                                       [--identity]
                                        [--interval]
                                        [--location]
                                        [--log-version]
@@ -223,6 +232,7 @@ directCommands:
                                        [--subnet]
                                        [--tags]
                                        [--traffic-analytics {0, 1, f, false, n, no, t, true, y, yes}]
+                                       [--user-assigned-identity]
                                        [--vnet]
                                        [--workspace]
   examples:
@@ -268,6 +278,9 @@ directCommands:
     parameterValueGroup: "JSON"
     summary: |-
       File type of the flow log.
+  - name: --identity
+    summary: |-
+      FlowLog resource Managed Identity  Support shorthand-syntax, json-file and yaml-file. Try "??" to show more.
   - name: --interval
     summary: |-
       Interval in minutes at which to conduct flow analytics. Temporarily allowed values are 10 and 60.
@@ -312,6 +325,9 @@ directCommands:
     parameterValueGroup: "0, 1, f, false, n, no, t, true, y, yes"
     summary: |-
       Enable traffic analytics. Defaults to true if `--workspace` is provided.
+  - name: --user-assigned-identity
+    summary: |-
+      Name or ID of the ManagedIdentity Resource.
   - name: --vnet
     summary: |-
       Name or ID of the Virtual Network Resource.
